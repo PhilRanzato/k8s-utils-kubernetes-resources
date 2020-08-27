@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go
+  labels:
+    tier: backend
+    language: golang
+spec:
+  replicas: 3 
+  selector: 
+    matchLabels: 
+      tier: backend
+      language: golang
+  template: 
+    metadata: 
+      labels: 
+        tier: backend
+        language: golang
+    spec: 
+      containers: 
+      - name: go
+        image: docker.registry.pr.ch/golang-backend:1.0.0
+        resources: {}
+        ports: 
+        - containerPort: 80
