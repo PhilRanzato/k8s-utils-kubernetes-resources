@@ -8,7 +8,7 @@ metadata:
     tier: backend
     language: golang
 spec:
-  replicas: 3 
+  replicas: 1
   selector: 
     matchLabels: 
       tier: backend
