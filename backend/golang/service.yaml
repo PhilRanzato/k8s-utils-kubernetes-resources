@@ -8,6 +8,9 @@ metadata:
     tier: backend
     language: golang
 spec:
+  selector:
+    tier: backend
+    language: golang  
   ports:
     - name: http
       protocol: TCP
