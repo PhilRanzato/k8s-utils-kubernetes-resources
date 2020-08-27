@@ -22,6 +22,15 @@ spec:
       containers: 
       - name: go
         image: docker.registry.pr.ch/golang-backend:1.0.0
+        imagePullPolicy: IfNotPresent
         resources: {}
         ports: 
         - containerPort: 80
+        volumeMounts:
+        - name: config
+          mountPath: /root/.kube
+      volumes:
+      - name: config
+        configMap:
+          name: kubeconfig
+      restartPolicy: Always
