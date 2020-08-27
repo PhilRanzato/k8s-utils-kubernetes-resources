@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: react
+  namespace: k8s-utils
+  labels:
+    tier: frontend
+    language: reactjs
+spec:
+  selector:
+    tier: frontend
+    language: reactjs  
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
