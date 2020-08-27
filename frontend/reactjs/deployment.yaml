@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react
+  namespace: k8s-utils
+  labels:
+    tier: frontend
+    language: reactjs
+spec:
+  replicas: 1 
+  selector: 
+    matchLabels: 
+      tier: frontend
+      language: reactjs
+  template: 
+    metadata: 
+      labels: 
+        tier: frontend
+        language: reactjs
+    spec: 
+      containers: 
+      - name: react
+        image: docker.registry.pr.ch/reactjs-frontend:1.0.0
+        resources: {}
+        env:
+        - name: BACKEND_SERVER
+          value: go
+        ports: 
+        - containerPort: 3000
