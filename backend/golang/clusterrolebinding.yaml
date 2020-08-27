@@ -6,7 +6,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: go
-  namespace: backend
+  namespace: k8s-utils
 roleRef:
   kind: ClusterRole
   name: go
