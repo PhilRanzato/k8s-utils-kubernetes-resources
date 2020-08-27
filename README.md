@@ -7,8 +7,8 @@ In the [backend](/backend) directory you can find all backend kubernetes resourc
 
 ### Frontend
 
-- [ReactJS](/frontend/reactjs)
+- [ReactJS](/frontend/reactjs/README.md)
 
 ### Backend
 
-- [Golang](/backend/golang)
+- [Golang](/backend/golang/README.md)
