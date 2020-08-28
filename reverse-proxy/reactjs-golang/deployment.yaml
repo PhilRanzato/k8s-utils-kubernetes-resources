@@ -39,10 +39,7 @@ spec:
         - mountPath: /etc/nginx/nginx.conf
           name: config
           subPath: nginx.conf
-      dnsPolicy: ClusterFirst
       restartPolicy: Always
-      securityContext:
-        fsGroup: 10000
       volumes:
       - configMap:
           defaultMode: 420
