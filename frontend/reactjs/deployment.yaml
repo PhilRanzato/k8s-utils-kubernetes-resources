@@ -23,6 +23,8 @@ spec:
       - name: react
         image: docker.registry.pr.ch/reactjs-frontend:1.0.0
         resources: {}
+        stdin: true
+        tty: true
         env:
         - name: BACKEND_SERVER
           value: go
