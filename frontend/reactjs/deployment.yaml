@@ -26,7 +26,8 @@ spec:
         stdin: true
         tty: true
         env:
+        # To be set only if not deployed on Kubernetes
         - name: BACKEND_SERVER
-          value: go
+          value: ""
         ports: 
         - containerPort: 3000
