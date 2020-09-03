@@ -9,5 +9,5 @@ Create the kubeconfig for the service account
 Create the config map for the golang backend deployment with:
 
 ```shell
-kubectl create cm kubeconfig --from-file=kubeconfig-go
+kubectl create cm kubeconfig --from-file=config
 ```

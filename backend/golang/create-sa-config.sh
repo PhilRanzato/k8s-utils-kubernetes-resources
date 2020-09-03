@@ -4,7 +4,7 @@ CONTEXT=$(kubectl config current-context)
 NAMESPACE=k8s-utils
 
 NEW_CONTEXT=go
-KUBECONFIG_FILE="kubeconfig-go"
+KUBECONFIG_FILE="config"
 
 
 SECRET_NAME=$(kubectl get serviceaccount ${SERVICE_ACCOUNT_NAME} \
