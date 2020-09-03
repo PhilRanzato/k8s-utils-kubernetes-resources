@@ -29,6 +29,7 @@ spec:
         volumeMounts:
         - name: config
           mountPath: /root/.kube
+      serviceAccountName: go
       volumes:
       - name: config
         configMap:
